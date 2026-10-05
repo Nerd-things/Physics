@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.10.4)  4 OCT 2026 14:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.10.4)  5 OCT 2026 20:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -129,6 +129,27 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@dimlist=\toks23
 
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cf
+g
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen158
+\Gin@req@width=\dimen159
+)
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdft
 ex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
@@ -137,20 +158,20 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 ) (electromagnetism.aux)
 \openout1 = `electromagnetism.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -186,12 +207,38 @@ LaTeX Font Info:    ... okay on input line 19.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 20.
 
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
+i
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count277
+\scratchdimen=\dimen160
+\scratchbox=\box54
+\nofMPsegments=\count278
+\nofMParguments=\count279
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count280
+\MPscratchDim=\dimen161
+\MPnumerator=\count281
+\makeMPintoPDFobject=\count282
+\everyMPtoPDFconversion=\toks25
+)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-ba
+se.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cf
+g
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
+
+ (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 20.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
 
 
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -199,7 +246,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 [1
 
-{C:/Users/User/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+{C:/Users/User/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
 (electromagnetism.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -207,19 +254,25 @@ L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2272 strings out of 474486
- 33575 string characters out of 5744227
- 1925542 words of memory out of 5000000
- 24585 multiletter control sequences out of 15000+600000
- 561265 words of font info for 49 fonts, out of 8000000 for 9000
+ 3097 strings out of 474486
+ 45951 string characters out of 5744227
+ 1933542 words of memory out of 5000000
+ 25373 multiletter control sequences out of 15000+600000
+ 566525 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,214b,213s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,7n,65p,363b,213s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mr12.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmr17.pfb>
-Output written on electromagnetism.pdf (1 page, 25548 bytes).
+mbx12.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmmi12.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmr17.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/User/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/User/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/User/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on electromagnetism.pdf (2 pages, 93524 bytes).
 PDF statistics:
- 16 PDF objects out of 1000 (max. 8388607)
+ 49 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
