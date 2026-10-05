@@ -7,8 +7,10 @@
 \usepackage{
 	amsmath,
 	amssymb,
-	geometry
+	geometry,
+	graphicx
 }
+\newcommand{\proptoinverse}{\mathrel{\mskip1mu\reflectbox{$\propto$}\mskip-1mu}}
 
 \geometry{margin=1in}
 
@@ -18,4 +20,63 @@
 
 \begin{document}
 	\maketitle
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% 							INTRODUCTION 							%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	% Author: Álvaro Fernández Barrero
+	% Date: 2026-10-5
+	\section{Particle's charge}
+	
+	Every particle has an intrinsic property called charge. This is a numerical value $Q$ which can be positive or negative. Some classic examples are electrons with negative charge and protons with positive charge, which is the reason why, chemistry-wise, we use $e^-$ to refer to electrons and $p^+$ to refer to protons.
+	
+	The charge has a meaningful behavior: opposite charges (positive and negative) attract each other and same charges (positive and positive, or negative and negative) repel each other.
+	
+	This is key to understand everything that comes next as it is the fundamental idea of the whole topic.
+	
+	These charges have the unit coulomb ($[Q] = C$).
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% 							COULOMB'S LAW 							%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	% Author: Álvaro Fernández Barrero
+	% Date: 2026-10-5
+	\subsection{Coulomb's law}
+	
+	When we take a look to when two particles are close to each other and they are either repelling or attracting each other, we can try to find out a formula that describe the force acting upon the particles. By doing some experimentation, we see that:
+	
+	\[
+		F \propto Q_1 \quad\quad F \propto Q_2 \quad\quad F \proptoinverse r^2
+	\]
+	
+	Where $r$ is the distance between the two particles and $F$ the magnitude of the vector force $F = \|\vec{F}\|$.
+	
+	At this point, these proportions are pretty much the same as the gravitational force and, therefore, we will obtain a similar formula.
+	
+	Mixing these pieces together, we have:
+	
+	\[
+	F = k \frac{Q_1 Q_2}{r^2}
+	\]
+	
+	And again, by doing some experiments, we can obtain the value of the constant $k$:
+	
+	\[
+	k = 8.99 \cdot 10^9 \frac{N \cdot m^2}{C^2} = \frac{1}{4 \pi \varepsilon_0} \frac{N \cdot m^2}{C^2}
+	\]
+	\[
+	\therefore F = \frac{Q_1 Q_2}{4 \pi \varepsilon_0 r^2}
+	\implies \vec{F} = \frac{Q_1 Q_2}{4 \pi \varepsilon_0 r^2} \hat{r}
+	\]
+	
+	Where $\hat{r}$ is a unit vector pointing from one charge to the other.
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% 							ELECTRIC FIELD 							%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	
+	
 \end{document}
