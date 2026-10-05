@@ -43,7 +43,7 @@
 	
 	% Author: Álvaro Fernández Barrero
 	% Date: 2026-10-5
-	\subsection{Coulomb's law}
+	\section{Coulomb's law}
 	
 	When we take a look to when two particles are close to each other and they are either repelling or attracting each other, we can try to find out a formula that describe the force acting upon the particles. By doing some experimentation, we see that:
 	
@@ -58,17 +58,17 @@
 	Mixing these pieces together, we have:
 	
 	\[
-	F = k \frac{Q_1 Q_2}{r^2}
+		F = k \frac{Q_1 Q_2}{r^2}
 	\]
 	
 	And again, by doing some experiments, we can obtain the value of the constant $k$:
 	
 	\[
-	k = 8.99 \cdot 10^9 \frac{N \cdot m^2}{C^2} = \frac{1}{4 \pi \varepsilon_0} \frac{N \cdot m^2}{C^2}
+		k = 8.99 \cdot 10^9 \frac{N \cdot m^2}{C^2} = \frac{1}{4 \pi \varepsilon_0} \frac{N \cdot m^2}{C^2}
 	\]
 	\[
-	\therefore F = \frac{Q_1 Q_2}{4 \pi \varepsilon_0 r^2}
-	\implies \vec{F} = \frac{Q_1 Q_2}{4 \pi \varepsilon_0 r^2} \hat{r}
+		\therefore F = \frac{Q_1 Q_2}{4 \pi \varepsilon_0 r^2}
+		\implies \vec{F} = \frac{Q_1 Q_2}{4 \pi \varepsilon_0 r^2} \hat{r}
 	\]
 	
 	Where $\hat{r}$ is a unit vector pointing from one charge to the other.
@@ -77,6 +77,49 @@
 	% 							ELECTRIC FIELD 							%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
+	\section{Electric field}
 	
+	Coulomb's law only work for two given charges, but the universe is full of them. That means that somehow we could attempt to have a more general formula for $n$ particles in our system. To do that we can think that a given particle with charge $Q$ is being constantly either pushed or pulled by different particles with different charges and, as this motion is provoked by individual forces, we can sum all of them up to have the total force applied to the particle with $Q$ charge.
+	
+	\[
+		\vec{F} = \sum_{\mu = 1}^n \frac{Q_\mu Q}{4 \pi \varepsilon_0} \hat{r}_\mu
+	\]
+	
+	Now that we have a nice expression for the forced applied to a particle given the $n$ charges in the system, we can perform some mathematical tricks to make it a little better to compute.
+	
+	\[
+		\vec{F}
+		= \frac{Q}{4 \pi \varepsilon_0} \sum_{\mu = 1}^n \frac{Q_\mu}{r_\mu^2} \hat{r}_\mu
+	\]
+	
+	As $r = \|\vec{r}_\mu - \vec{r}\|$ by definition, being $\vec{r}$ the testing particle's position and $\vec{r}_\mu$ the $\mu$-charged particle's position, then:
+	
+	\[
+		\vec{F}
+		= \frac{Q}{4 \pi \varepsilon_0} \sum_{\mu = 1}^n \frac{Q_\mu}{\|\vec{r}_\mu - \vec{r}\|^2} \hat{r}_\mu
+	\]
+	
+	And again, by how we have defined the parameters:
+	
+	\[
+		\hat{r}_\mu = \frac{\vec{r}_\mu - \vec{r}}{\|\vec{r}_\mu - \vec{r}\|}
+	\]
+	
+	Thus:
+	
+	\[
+		\vec{F}
+		= \frac{Q}{4 \pi \varepsilon_0} \sum_{\mu = 1}^n \frac{Q_\mu}{\|\vec{r}_\mu - \vec{r}\|^3} (\vec{r}_\mu - \vec{r})
+	\]
+	
+	That is the formula after all this work, but the purpose of it all was actually to have a formula such that for any particle with any charge we can compute the force that is going to undergo. For the moment, that testing particle's charge is part of the formula, even though that is not something we want. Therefore, let us define a vector field $\vec{E}(\vec{r})$ as:
+	
+	\[
+		\vec{E}(\vec{r}) = \frac{\vec{F}}{Q} = \frac{1}{4 \pi \varepsilon_0} \sum_{\mu = 1}^n \frac{Q_\mu}{\|\vec{r}_\mu - \vec{r}\|^3} (\vec{r}_\mu - \vec{r})
+	\]
+	
+	This is what we call \emph{Electric field} and returns the force a particle would have given a position in the system according to the set particles' charge.
+	
+	By that, something easy to state is that, a particle with charge $Q$ will have a force at $\vec{r}$ of $Q\vec{E}(\vec{r})$ in the system.
 	
 \end{document}
