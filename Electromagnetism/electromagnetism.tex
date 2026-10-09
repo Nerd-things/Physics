@@ -8,8 +8,11 @@
 	amsmath,
 	amssymb,
 	geometry,
-	graphicx
+	graphicx,
+	esint
 }
+
+
 \newcommand{\proptoinverse}{\mathrel{\mskip1mu\reflectbox{$\propto$}\mskip-1mu}}
 
 \geometry{margin=1in}
@@ -77,6 +80,8 @@
 	% 							ELECTRIC FIELD 							%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
+	% Author: Álvaro Fernández Barrero
+	% Date: 2026-10-5
 	\section{Electric field}
 	
 	Coulomb's law only work for two given charges, but the universe is full of them. That means that somehow we could attempt to have a more general formula for $n$ particles in our system. To do that we can think that a given particle with charge $Q$ is being constantly either pushed or pulled by different particles with different charges and, as this motion is provoked by individual forces, we can sum all of them up to have the total force applied to the particle with $Q$ charge.
@@ -121,5 +126,99 @@
 	This is what we call \emph{Electric field} and returns the force a particle would have given a position in the system according to the set particles' charge.
 	
 	By that, something easy to state is that, a particle with charge $Q$ will have a force at $\vec{r}$ of $Q\vec{E}(\vec{r})$ in the system.
+	
+	% Author: Álvaro Fernández Barrero
+	% Date: 2026-10-9
+	\subsection{Gauß's law}
+	
+	From here, the mathematics used are going to increase significantly using vector calculus, but the results are gorgeous and riveting.
+	
+	Let us get some more realistic and be in a 3D space, like in our daily life, which will allow us to use the Gauß's divergence theore.
+	
+	Something interesting happens when we want to compute the flux of the electric field over a surface $\partial V$, let us go through it.
+	
+	\[
+		\Phi_E = \oiint_{\partial V} \vec{E} \cdot d\vec{S}
+		= \oiint_{\partial V} \frac{1}{4 \pi \varepsilon_0} \sum_{\mu = 0}^{n} \frac{Q_\mu}{\|\vec{r}-\vec{r_\mu}\|^3}(\vec{r} - \vec{r_\mu}) \cdot d\vec{S}
+	\]
+	
+	It is important to remark here that every charge $Q_\mu$ is \textbf{within} the surface $\partial V$.
+	Then, we can take the constants out of the integral and use the linearity of the integrals to obtain:
+	
+	\[
+		\Phi_E
+		= \frac{1}{4 \pi \varepsilon_0} \sum_{\mu = 0}^{n} \oiint_{\partial V} \frac{Q_\mu}{\|\vec{r}-\vec{r_\mu}\|^3}(\vec{r} - \vec{r_\mu}) \cdot d\vec{S}
+	\]
+	
+	To make it simple, let us assume $\partial V$ be a sphere.
+	Now, we can place $Q_\mu$ outside the integral since it is a constant for it and express this integral in spherical coordinates. To make it simple, we will say that $\vec{r} - \vec{r_\mu} = \vec{r}_{p\mu}$ and $\|\vec{r} - \vec{r_\mu}\| = \rho$.
+	
+	Here, the differential $d\vec{S} = dS\hat{r} = \rho^2 \sin(\theta) d\theta d\varphi \hat{r}$ where $\rho$ is the radius of the sphere. Thus:
+	
+	\[
+		\begin{aligned}
+			& \Phi_E
+			= \frac{1}{4 \pi \varepsilon_0} \sum_{\mu = 0}^{n} Q_\mu \oiint_{\partial V} \frac{1}{\rho^2} \hat{r}_{p\mu} \cdot (\rho^2 \sin(\theta) d\theta d\varphi \hat{r})
+			= \frac{1}{4 \pi \varepsilon_0} \sum_{\mu = 0}^{n} Q_\mu \oiint_{\partial V} \frac{1}{\rho^2} \rho^2 \sin(\theta) d\theta d\varphi (\hat{r}_{p\mu} \cdot \hat{r})
+			\\
+			& \hspace{1.5em} = \frac{1}{4 \pi \varepsilon_0} \sum_{\mu = 0}^{n} Q_\mu \oiint_{\partial V} \sin(\theta) d\theta d\varphi (\hat{r}_{p\mu} \cdot \hat{r})
+		\end{aligned}
+	\]
+	
+	Here, $\hat{r}$ and $\hat{r}_{p\mu}$ must be two unit vectors pointing in the same direction, which means that $\hat{r} \cdot \hat{r}_{p\mu} = 1$:
+	
+	\[
+		= \frac{1}{4 \pi \varepsilon_0} \sum_{\mu = 0}^{n} Q_\mu \oiint_{\partial V} \sin(\theta) d\theta d\varphi
+	\]
+	
+	We know rewrite the surface $\partial V$ in terms of spherical coordinates which is $\partial V = [0, 2\pi] \times [0, \pi]$:
+	
+	\[
+		\begin{aligned}
+			& = \frac{1}{4 \pi \varepsilon_0} \sum_{\mu = 0}^{n} Q_\mu \int_{0}^{2\pi} \int_{0}^{\pi} \sin(\theta) d\theta d\varphi
+			= \frac{1}{4 \pi \varepsilon_0} \sum_{\mu = 0}^{n} Q_\mu \int_{0}^{2\pi} [-\cos(\theta)]_{\theta = 0}^{\theta = \pi} d\varphi
+			= \frac{1}{4 \pi \varepsilon_0} \sum_{\mu = 0}^{n} Q_\mu \int_{0}^{2\pi} 2 d\varphi
+			\\
+			& = \frac{1}{4 \pi \varepsilon_0} \sum_{\mu = 0}^{n} 2Q_\mu \varphi|_{\varphi = 0}^{\varphi = 2\pi}
+			= \frac{1}{4 \pi \varepsilon_0} \sum_{\mu = 0}^{n} Q_\mu 4\pi
+			= \frac{1}{4 \pi \varepsilon_0} 4\pi  
+			= \frac{1}{\varepsilon_0} \sum_{\mu = 0}^{n} Q_\mu
+		\end{aligned}
+	\]
+	
+	Hence:
+	
+	\[
+		\Phi_E
+		= \oiint_{\partial V} \vec{E} \cdot d\vec{S}
+		= \frac{Q_{in}}{\varepsilon_0},
+		\hspace{2em}
+		Q_{in} = \sum_{\mu = 0}^n Q_\mu
+	\]
+	
+	In the result, we do not see that the radius of the sphere we have been using to integrate over the field is present. This is super interesting because it means that the result does not rely on it whatsoever: it does not matter the radius of the sphere we use, the result will be always the same.
+	
+	This is the first Maxwell's law, 4 laws that describe how electric and magnetic fields interact with each other, but this is a topic we will discuss later.
+	
+	With this result, we can obtain the differential form of it by using \emph{Gauß's divergence theorem} and thinking that $Q_{in}$ is actually that charge density $\rho$ within the given surface $\partial V$.
+	
+	\[
+		Q_{in} = \iiint_{V} \rho dV
+		\oiint_{\partial V} \vec{E} \cdot d\vec{S}
+		= \iiint_V \nabla \cdot \vec{E} dV
+	\]
+	
+	Thus, we can now use these forms in our original flux $\Phi_E$:
+	
+	\[
+		\iiint_V \nabla \cdot \vec{E} dV
+		= \iiint_V \frac{\rho}{\varepsilon_0} dV
+	\]
+	
+	Here, since we are integrating over the same volume, the two integrals will have the same result when the integrating parts are the same, thus:
+	
+	\[
+		\therefore \nabla \cdot \vec{E} = \frac{\rho}{\varepsilon_0}
+	\]
 	
 \end{document}
